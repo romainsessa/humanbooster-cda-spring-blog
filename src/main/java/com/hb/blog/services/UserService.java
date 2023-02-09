@@ -3,9 +3,12 @@ package com.hb.blog.services;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.hb.blog.dtos.UserDTO;
+import com.hb.blog.dtos.UserFormDTO;
 import com.hb.blog.models.LocalUser;
 import com.hb.blog.repositories.UserRepository;
 
@@ -14,8 +17,11 @@ public class UserService {
 
 	private UserRepository userRepository;
 	
-	public UserService(UserRepository userRepository) {
+	private PasswordEncoder passwordEncoder;
+	
+	public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
 		this.userRepository = userRepository;
+		this.passwordEncoder = passwordEncoder;
 	}
 	
 	public List<UserDTO> getUsers() {
@@ -30,5 +36,11 @@ public class UserService {
 		return userDtos;
 	}
 	
-	
+	public void saveUser(UserFormDTO inputUser) {
+		LocalUser user = new LocalUser();
+		user.setUsername(inputUser.username());
+		user.setPassword(passwordEncoder.encode(inputUser.password()));
+		user.setRole("USER");		
+		userRepository.save(user);		
+	}	
 }

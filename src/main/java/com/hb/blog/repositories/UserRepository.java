@@ -19,16 +19,16 @@ import com.hb.blog.models.LocalUser;
 @Repository
 public class UserRepository {
 	
-	private final static Logger logger = LoggerFactory.getLogger(getClass());
+	private final static Logger logger = LoggerFactory.getLogger(UserRepository.class);
 
 	public List<LocalUser> getUsers() {
 		List<LocalUser> users = new ArrayList<>();
 
 		ObjectMapper mapper = new ObjectMapper();
 		try {
-			File resourceJson = new ClassPathResource("users.json").getFile();
-			users = mapper.readValue(resourceJson, new TypeReference<List<LocalUser>>() {
-			});
+			File resourceJson = new File("src/main/resources/users.json");
+			users = mapper.readValue(resourceJson, new TypeReference<List<LocalUser>>() {});
+			logger.info("getUsers called - nb users fetched = " + users.size());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

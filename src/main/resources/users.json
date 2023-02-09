@@ -10,32 +10,12 @@
   "role" : "ADMIN"
 }, {
   "id" : 3,
-  "username" : "test4",
-  "password" : "test4",
-  "role" : "ADMIN"
+  "username" : "romain",
+  "password" : "$2a$10$CF1GssVeyE1GntxCfRUEI.Zm7apOlbOCiqk1NrmEo.OtUk3efcKlu",
+  "role" : "USER"
 }, {
   "id" : 4,
-  "username" : "test4",
-  "password" : "test4",
-  "role" : "ADMIN"
-}, {
-  "id" : 5,
-  "username" : "test4",
-  "password" : "test4",
-  "role" : "ADMIN"
-}, {
-  "id" : 6,
-  "username" : "test4",
-  "password" : "test4",
-  "role" : "ADMIN"
-}, {
-  "id" : 7,
-  "username" : "test4",
-  "password" : "test4",
-  "role" : "ADMIN"
-}, {
-  "id" : 8,
-  "username" : "test4",
-  "password" : "test4",
-  "role" : "ADMIN"
+  "username" : "sessa",
+  "password" : "$2a$10$G5RK4cCMag/8njZxgcAyi.jvQATvYTbzkMP/RRWyT.OzuVCoUvlBG",
+  "role" : "USER"
 } ]
