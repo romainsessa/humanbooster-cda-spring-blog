@@ -1,0 +1,41 @@
+[ {
+  "id" : 1,
+  "username" : "user",
+  "password" : "$2a$12$a5uMRm0MNoSWZmZ3c1ZsYeDppRyTxorA54Ubmp3ShZTOwaUKIvOku",
+  "role" : "USER"
+}, {
+  "id" : 2,
+  "username" : "admin",
+  "password" : "$2a$12$5Imjk1at5PVBS3CyKSXBKOJu2pdlbGQxFJB79UBA6CwrAPRpw6f4K",
+  "role" : "ADMIN"
+}, {
+  "id" : 3,
+  "username" : "test4",
+  "password" : "test4",
+  "role" : "ADMIN"
+}, {
+  "id" : 4,
+  "username" : "test4",
+  "password" : "test4",
+  "role" : "ADMIN"
+}, {
+  "id" : 5,
+  "username" : "test4",
+  "password" : "test4",
+  "role" : "ADMIN"
+}, {
+  "id" : 6,
+  "username" : "test4",
+  "password" : "test4",
+  "role" : "ADMIN"
+}, {
+  "id" : 7,
+  "username" : "test4",
+  "password" : "test4",
+  "role" : "ADMIN"
+}, {
+  "id" : 8,
+  "username" : "test4",
+  "password" : "test4",
+  "role" : "ADMIN"
+} ]

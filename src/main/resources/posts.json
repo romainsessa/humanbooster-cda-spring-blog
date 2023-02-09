@@ -1,0 +1,10 @@
+[{
+	"id" : 1,
+    "title" : "first blog post",
+    "content" : "this blog will be awesome, trust me !"
+},
+{
+	"id" : 2,
+    "title" : "some news",
+    "content" : "it's incredible ! 1 person saw my first blog post *_*"
+}]

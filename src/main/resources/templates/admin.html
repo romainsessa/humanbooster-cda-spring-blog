@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Administrator dashboard</title>
+</head>
+<body>
+<h1>Dashboard</h1>
+<p>This page is reserved for administrators to manage users.</p>
+<table>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Username</th>
+				<th>Role</th>
+			<tr>
+		</thead>
+		<tbody>
+			<tr th:each="user: ${users}">
+				<td><span th:text="${user.id}" /></td>
+				<td><span th:text="${user.username}" /></td>
+				<td><span th:text="${user.role}" /></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
