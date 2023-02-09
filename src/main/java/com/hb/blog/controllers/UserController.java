@@ -40,7 +40,7 @@ public class UserController {
 	@PostMapping("public/user/new")
 	public ModelAndView registerUser(@ModelAttribute UserFormDTO user) {		
 		userService.saveUser(user);		
-		ModelAndView mav = new ModelAndView("redirect::/login");
+		ModelAndView mav = new ModelAndView("redirect:/login");
 		return mav;		
 	}
 	

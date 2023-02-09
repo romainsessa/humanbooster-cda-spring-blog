@@ -18,4 +18,9 @@
   "username" : "sessa",
   "password" : "$2a$10$G5RK4cCMag/8njZxgcAyi.jvQATvYTbzkMP/RRWyT.OzuVCoUvlBG",
   "role" : "USER"
+}, {
+  "id" : 5,
+  "username" : "toto",
+  "password" : "$2a$10$l.NwJghlqXzf61Uq.i2o.en4imvh3GfG9mtY/fMVm1MX8C9JXg1Dy",
+  "role" : "USER"
 } ]
