@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Repository;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -19,19 +18,18 @@ public class PostRepository {
 
 	public List<Post> getPosts() {
 		List<Post> posts = new ArrayList<>();
-		
-		ObjectMapper mapper = new ObjectMapper();		
+
+		ObjectMapper mapper = new ObjectMapper();
 		try {
 			File resourceJson = new File("src/main/resources/posts.json");
-			posts = mapper.readValue(
-					resourceJson, 
-					new TypeReference<List<Post>>() {} );			
+			posts = mapper.readValue(resourceJson, new TypeReference<List<Post>>() {
+			});
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return posts;
 	}
-	
+
 	public void save(Post post) {
 		List<Post> existingsPosts = getPosts();
 		int newId = 0;
@@ -47,9 +45,9 @@ public class PostRepository {
 		try {
 			File resourceJson = new File("src/main/resources/posts.json");
 			String jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(existingsPosts);
-			
-			//logger.info(jsonString);
-			
+
+			// logger.info(jsonString);
+
 			BufferedWriter writer = new BufferedWriter(new FileWriter(resourceJson));
 			writer.write(jsonString);
 			writer.close();
@@ -57,5 +55,5 @@ public class PostRepository {
 			e.printStackTrace();
 		}
 	}
-	
+
 }

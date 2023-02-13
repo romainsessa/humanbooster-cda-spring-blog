@@ -10,5 +10,5 @@ public class PublicController {
 	public String homePage() {
 		return "home";
 	}
-	
+
 }

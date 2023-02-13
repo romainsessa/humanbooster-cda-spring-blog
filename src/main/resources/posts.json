@@ -26,4 +26,12 @@
   "id" : 7,
   "title" : "post 6",
   "content" : "content 6"
+}, {
+  "id" : 8,
+  "title" : "tester",
+  "content" : "tester"
+}, {
+  "id" : 9,
+  "title" : "tester",
+  "content" : "tester"
 } ]

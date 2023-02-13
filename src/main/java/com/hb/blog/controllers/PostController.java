@@ -19,13 +19,13 @@ import jakarta.validation.Valid;
 @Controller
 @RequestMapping(value = "/private/post")
 public class PostController {
-	
+
 	private PostService postService;
-	
+
 	public PostController(PostService postService) {
 		this.postService = postService;
 	}
-	
+
 	@GetMapping("")
 	public ModelAndView getPosts() {
 		List<PostDTO> posts = postService.getPosts();
@@ -33,21 +33,21 @@ public class PostController {
 		mav.addObject("posts", posts);
 		return mav;
 	}
-	
+
 	@GetMapping("/add")
 	public ModelAndView addPost() {
 		ModelAndView mav = new ModelAndView("addpost");
 		mav.addObject("post", new PostDTO("", ""));
 		return mav;
 	}
-	
+
 	@PostMapping("/add")
 	public String addPost(@Valid @ModelAttribute("post") PostDTO post, BindingResult result, Model model) {
-		if(result.hasErrors()) {
+		if (result.hasErrors()) {
 			return "addpost";
 		}
 		postService.addPost(post);
 		return "redirect:/private/post";
 	}
-	
+
 }
