@@ -23,4 +23,9 @@
   "username" : "toto",
   "password" : "$2a$10$l.NwJghlqXzf61Uq.i2o.en4imvh3GfG9mtY/fMVm1MX8C9JXg1Dy",
   "role" : "USER"
+}, {
+  "id" : 6,
+  "username" : "test",
+  "password" : "$2a$10$WpXiPz7ZvkXKKDpkTC2MO.YKfCqpN5VAxBtnzwlR.jiOIhYAdjXY.",
+  "role" : "USER"
 } ]

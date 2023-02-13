@@ -1,9 +1,13 @@
 package com.hb.blog.models;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class LocalUser {
 
 	private Integer id;
+	@NotBlank(message = "Username is mandatory")
 	private String username;
+	@NotBlank(message = "Password is mandatory")
 	private String password;
 	private String role;
 

@@ -1,10 +1,29 @@
-[{
-	"id" : 1,
-    "title" : "first blog post",
-    "content" : "this blog will be awesome, trust me !"
-},
-{
-	"id" : 2,
-    "title" : "some news",
-    "content" : "it's incredible ! 1 person saw my first blog post *_*"
-}]
+[ {
+  "id" : 1,
+  "title" : "first blog post",
+  "content" : "this blog will be awesome, trust me !"
+}, {
+  "id" : 2,
+  "title" : "some news",
+  "content" : "it's incredible ! 1 person saw my first blog post *_*"
+}, {
+  "id" : 3,
+  "title" : "test post",
+  "content" : "this is the content of the post"
+}, {
+  "id" : 4,
+  "title" : "post 4",
+  "content" : "a new content"
+}, {
+  "id" : 5,
+  "title" : "post 5",
+  "content" : "content 5"
+}, {
+  "id" : 6,
+  "title" : "add",
+  "content" : "add"
+}, {
+  "id" : 7,
+  "title" : "post 6",
+  "content" : "content 6"
+} ]

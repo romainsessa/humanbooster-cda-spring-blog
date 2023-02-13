@@ -29,5 +29,12 @@ public class PostService {
 		return postsDtos;
 	}
 	
+	public void addPost(PostDTO postDTO) {
+		Post post = new Post();
+		post.setTitle(postDTO.title());
+		post.setContent(postDTO.content());
+		postRepository.save(post);
+	}
+	
 	
 }

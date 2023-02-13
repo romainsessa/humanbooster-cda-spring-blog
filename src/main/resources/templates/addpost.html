@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add post form</title>
+</head>
+<body>
+	<h1>New post</h1>
+
+	<form th:action="@{/private/post/add}" th:object="${post}" method="post">
+		<input type="text" th:field="*{title}"/> <br /> 
+		<p th:if="${#fields.hasErrors('title')}" th:errorclass="error" th:errors="*{title}" />
+		<input type="text" th:field="*{content}"/> <br /> 
+		<p th:if="${#fields.hasErrors('content')}" th:errorclass="error" th:errors="*{content}" />		
+		<input type="submit" value="Add" />
+	</form>
+
+</body>
+</html>

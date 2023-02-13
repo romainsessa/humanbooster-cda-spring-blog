@@ -28,7 +28,7 @@ public class UserRepository {
 		try {
 			File resourceJson = new File("src/main/resources/users.json");
 			users = mapper.readValue(resourceJson, new TypeReference<List<LocalUser>>() {});
-			logger.info("getUsers called - nb users fetched = " + users.size());
+			//logger.info("getUsers called - nb users fetched = " + users.size());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -1,5 +1,7 @@
 package com.hb.blog.dtos;
 
-public record PostDTO(String title, String content) {
+import jakarta.validation.constraints.NotBlank;
 
-}
+public record PostDTO(
+		@NotBlank(message = "title is mandatory") String title, 
+		@NotBlank(message = "content is mandatory") String content) {}
